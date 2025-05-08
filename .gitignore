@@ -1,15 +1,17 @@
 # Environment variables
 .env
 
-# IDE files
-.vscode/
-.idea/
+# Sensitive configuration files
+js/form-config.js
 
 # System files
 .DS_Store
 Thumbs.db
 
+# IDE files
+.vscode/
+.idea/
+
 # Build files
 node_modules/
 dist/
-build/
