@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html data-wf-page="5c475bc9c604e5dfb6122e77"
-    data-wf-site="5c1bb997cb1dd637bfe6c899">
+<html data-wf-page="5c475bc9c604e5dfb6122e77" data-wf-site="5c1bb997cb1dd637bfe6c899">
 
 <head>
     <meta charset="utf-8" />
@@ -579,59 +578,7 @@
         type="text/javascript"></script>
     <script src="https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/js/webflow.cd1fcc33.224b477c0f30c428.js"
         type="text/javascript"></script>
-    <script type="text/javascript">
-        $(function () {
-            $(window).scrollTop($(window).scrollTop() + 1);
-        })
-    </script>
-
-    <script type="text/javascript">
-        $(function () {
-            /*
-            * Shuffle jQuery array of elements - see Fisher-Yates algorithm
-            */
-            jQuery.fn.shuffle = function () {
-                var j;
-                for (var i = 0; i < this.length; i++) {
-                    j = Math.floor(Math.random() * this.length);
-                    $(this[i]).before($(this[j]));
-                }
-                return this;
-            };
-            $('.contact-words').shuffle();
-
-            const $els = $('.contact-words');
-            //console.log('els', $els);
-
-            function getNextIndex(arr, i) {
-                return (i + 1) % arr.length;
-            }
-            function next() {
-                let activeIndex;
-
-                $els.each(function (i) {
-                    const $el = $(this);
-                    //console.log(i, $el, $el.hasClass('hide'));
-                    if (!$el.hasClass('hide')) {
-                        activeIndex = i;
-                    }
-                });
-                $els.addClass('hide');
-                if (typeof activeIndex !== "number") {
-                    //console.log('first run')
-                    activeIndex = $els.length - 1;
-                }
-                const nextIndex = getNextIndex($els, activeIndex);
-                //console.log('nextIndex', nextIndex)
-                const $nextItem = $els.eq(nextIndex);
-                //console.log( $nextItem)
-                $nextItem.removeClass('hide');
-                window.setTimeout(next, 1400);
-            }
-
-            next()
-        })
-    </script>
+    <script src="/js/project-scripts.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="js/form-config.js"></script>
 
