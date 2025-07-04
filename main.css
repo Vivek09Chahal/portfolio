@@ -2946,7 +2946,7 @@ figcaption {
 }
 
 .section-padding.gradient-top.section-min-height.home-section-cta-bg {
-  background-image: linear-gradient(to bottom, var(--brown), #1d131300 21%), url("Calculator.jpg");
+  background-image: linear-gradient(to bottom, var(--brown), #1d131300 21%), url("j.jpg");
   background-position: 0 0, 50%;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
