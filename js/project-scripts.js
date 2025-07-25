@@ -22,13 +22,6 @@ gtag('js', new Date());
 gtag('config', 'UA-139135203-1', {
     'anonymize_ip': false
 });
-
-// Google Analytics (second instance)
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-    dataLayer.push(arguments);
-}
-gtag('js', new Date());
 gtag('set', 'developer_id.dZGVlNj', true);
 gtag('config', 'G-R0PPLZ7DYQ');
 
