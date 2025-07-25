@@ -3,25 +3,11 @@
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
 }
 
 body {
   margin: 0;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-audio, canvas, progress, video {
-  vertical-align: baseline;
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  height: 0;
-  display: none;
 }
 
 [hidden], template {
@@ -81,6 +67,21 @@ img {
   border: 0;
 }
 
+
+/* // image animation */
+.project-image-element {
+  image-rendering: auto;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.project-image-element:hover {
+  image-rendering: pixelated;
+  filter: grayscale(100%) contrast(200%);
+  transform: scale(1.02); 
+}
+
+/* ///// till here  */
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -95,7 +96,7 @@ pre {
 }
 
 code, kbd, pre, samp {
-  font-family: monospace;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 1em;
 }
 
@@ -171,7 +172,7 @@ td, th {
 }
 
 @font-face {
-  font-family: webflow-icons;
+  font-family:  "Bitcount Prop Single", system-ui;
   src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -186,7 +187,7 @@ td, th {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  font-family: webflow-icons !important;
+  font-family:  "Bitcount Prop Single", system-ui;
 }
 
 .w-icon-slider-right:before {
@@ -224,12 +225,12 @@ html {
 .bitcount-prop-single {
   font-family: "Bitcount Prop Single", system-ui;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
   font-variation-settings:
     "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
+    "CRSV" 0,
+    "ELSH" 100,
     "ELXP" 0;
 }
 
@@ -1076,7 +1077,7 @@ textarea.w-input, textarea.w-select {
   -webkit-tap-highlight-color: transparent;
   background: #000000e6;
   outline: 0;
-  font-family: Helvetica Neue, Helvetica, Ubuntu, Segoe UI, Verdana, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
@@ -1639,7 +1640,7 @@ textarea.w-input, textarea.w-select {
 }
 
 @font-face {
-  font-family: Gt america compressed;
+  font-family:  "Bitcount Prop Single", system-ui;
   src: url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce8e57c680631bec67bcb_GT-America-Compressed-Black.woff2") format("woff2"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce8e57c9652ed21a74edc_GT-America-Compressed-Black.eot") format("embedded-opentype"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce8e52cc628a994d4e25b_GT-America-Compressed-Black.woff") format("woff"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce8e571ff1209b4db3c05_GT-America-Compressed-Black.ttf") format("truetype"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce8e54ec92180fe4f2ca1_GT-America-Compressed-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
@@ -1647,7 +1648,7 @@ textarea.w-input, textarea.w-select {
 }
 
 @font-face {
-  font-family: Gt america compressed;
+  font-family:  "Bitcount Prop Single", system-ui;
   src: url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce902868913010aba5731_GT-America-Compressed-Bold.woff2") format("woff2"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce9027c96526c33a74efe_GT-America-Compressed-Bold.eot") format("embedded-opentype"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce902868913467bba5730_GT-America-Compressed-Bold.woff") format("woff"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce9027c96526b73a74efd_GT-America-Compressed-Bold.ttf") format("truetype"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce9027c9652473fa74efc_GT-America-Compressed-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
@@ -1655,7 +1656,7 @@ textarea.w-input, textarea.w-select {
 }
 
 @font-face {
-  font-family: Gt america compressed;
+  font-family:  "Bitcount Prop Single", system-ui;
   src: url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce9108689133b8dba573b_GT-America-Compressed-Medium.woff2") format("woff2"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce90f71ff12c027db3c2f_GT-America-Compressed-Medium.eot") format("embedded-opentype"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce91071ff12a774db3c31_GT-America-Compressed-Medium.woff") format("woff"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce91071ff12d5f5db3c30_GT-America-Compressed-Medium.ttf") format("truetype"), url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c2ce90f7c68061078c67bf4_GT-America-Compressed-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
@@ -1728,7 +1729,7 @@ textarea.w-input, textarea.w-select {
 body {
   color: var(--cream);
   background-color: #000;
-  font-family: Work Sans, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.6em;
@@ -1739,7 +1740,7 @@ h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 40px;
-  font-family: Gt america compressed, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 6em;
   font-weight: 900;
   line-height: 1em;
@@ -1749,7 +1750,7 @@ h2 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: Gt america compressed, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 4em;
   font-weight: 900;
   line-height: 1em;
@@ -1759,7 +1760,7 @@ h3 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: Gt america extended, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 1.7em;
   font-weight: 400;
   line-height: 1.2em;
@@ -1768,7 +1769,7 @@ h3 {
 h4 {
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: Gt america compressed, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 1.4em;
   font-weight: 500;
   line-height: 1.6em;
@@ -1779,7 +1780,7 @@ h5 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: Gt america compressed, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 1.1em;
   font-weight: 500;
   line-height: 1.2em;
@@ -1791,7 +1792,7 @@ h6 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: Work Sans, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: .6em;
   font-weight: 600;
   line-height: 2em;
@@ -1799,7 +1800,7 @@ h6 {
 
 p {
   margin-bottom: 20px;
-  font-family: Work Sans, sans-serif;
+  font-family:  "Cinzel Decorative", serif;
   font-size: 1em;
   line-height: 2em;
 }
@@ -1817,7 +1818,7 @@ ul, ol {
 
 li {
   margin-bottom: 10px;
-  font-family: Work Sans, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 1em;
   line-height: 1.6em;
 }
@@ -1850,7 +1851,7 @@ figure {
 figcaption {
   text-align: center;
   margin-top: 5px;
-  font-family: Work Sans, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: .7em;
   font-style: normal;
   line-height: 1.6em;
@@ -1980,7 +1981,7 @@ figcaption {
   border: 1px solid #222;
   align-items: center;
   padding: 0 20px;
-  font-family: Gt america compressed, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 1.2em;
   font-weight: 500;
   line-height: 2.4em;
@@ -2067,7 +2068,7 @@ figcaption {
   text-transform: none;
   padding-left: 16px;
   padding-right: 16px;
-  font-family: Work Sans, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: .9em;
   font-weight: 400;
   transition: color .2s, border .2s;
@@ -2164,7 +2165,7 @@ figcaption {
 .field-label {
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: Gt america compressed, sans-serif;
+  font-family:  "Bitcount Prop Single", system-ui;
   font-size: 1.1em;
   font-weight: 500;
   line-height: 1.2em;
@@ -2354,7 +2355,7 @@ figcaption {
   color: var(--text-med);
   text-align: center;
   margin-bottom: 10px;
-  font-family: Gt america extended, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-size: .7em;
   font-weight: 700;
 }
@@ -2528,11 +2529,18 @@ figcaption {
   display: flex;
 }
 
+/*  inspire user section background */
 .section-padding.gradient-top.section-min-height.home-section-cta-bg {
   background-image: linear-gradient(to bottom, var(--brown), #1d131300 21%), url("j.jpg");
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
+  transition: filter 0.3s ease;
 }
+
+.section-padding.gradient-top.section-min-height.home-section-cta-bg:hover {
+  filter: grayscale(100%);
+}
+/*  till here  */
 
 .section-padding.gradient-top.project-content {
   padding-top: 10px;
@@ -2643,7 +2651,7 @@ figcaption {
 .text-h1.text-white.nav-menu-link {
   color: var(--cream);
   text-transform: uppercase;
-  font-family: Gt america compressed, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   line-height: .8em;
   transition: color .2s, padding .2s;
   display: inline-block;
@@ -2716,17 +2724,6 @@ figcaption {
   align-items: center;
 }
 
-.project-image-element {
-  flex-direction: row;
-  flex: 0 auto;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
 .project-summary {
   max-width: 770px;
   margin-bottom: 0;
@@ -2762,7 +2759,7 @@ figcaption {
   width: 620px;
   margin-left: auto;
   margin-right: auto;
-  font-family: Work Sans, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-weight: 700;
   line-height: 1.2em;
   display: block;
@@ -2780,7 +2777,7 @@ figcaption {
   width: 620px;
   margin: 80px auto 20px;
   padding: 0;
-  font-family: Gt america compressed, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-size: 3em;
   font-style: normal;
   font-weight: 400;
@@ -2795,7 +2792,7 @@ figcaption {
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-  font-family: Work Sans, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-weight: 400;
   display: block;
 }
@@ -3320,7 +3317,7 @@ figcaption {
 
 .heading-5 {
   text-transform: uppercase;
-  font-family: Gt america extended, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-size: 2em;
   font-weight: 700;
   line-height: 1.6em;
@@ -3369,7 +3366,7 @@ figcaption {
   margin-bottom: 0;
   margin-left: 16px;
   padding-left: 0;
-  font-family: Gt america compressed, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-size: 1.2em;
   font-weight: 500;
   transition: border-color .2s, color .2s;
@@ -3515,7 +3512,7 @@ figcaption {
 
 .stat-large {
   margin-bottom: 10px;
-  font-family: Gt america extended, sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-size: 9em;
   font-weight: 700;
 }
@@ -3794,89 +3791,6 @@ figcaption {
   color: var(--cream);
 }
 
-.link-block-5 {
-  justify-content: space-between;
-  font-size: .9em;
-  display: flex;
-}
-
-.text-block-2 {
-  margin-bottom: 40px;
-}
-
-.home-h1-image {
-  height: 200px;
-  display: block;
-}
-
-.home-h1-image.mobile {
-  display: none;
-}
-
-.header-h1-list-item {
-  list-style-type: none;
-  display: inline-block;
-}
-
-.h1-letter {
-  margin-bottom: 0;
-  font-size: 8em;
-}
-
-.h1-letter.space {
-  margin-right: 24px;
-}
-
-.h1-letter.l {
-  margin-right: 4px;
-}
-
-.h1-letter.d {
-  margin-right: 3px;
-}
-
-.h1-letter.l2 {
-  margin-right: 2px;
-}
-
-.h1-letter.s {
-  margin-right: 3px;
-}
-
-.h1-letter.e {
-  margin-right: 2px;
-}
-
-.h1-letter.n {
-  margin-right: -2px;
-}
-
-.h1-headline-text {
-  display: none;
-}
-
-.text-field-2 {
-  margin-bottom: 28px;
-}
-
-.next-prev-h5 {
-  margin-bottom: 0;
-}
-
-.right-arrow {
-  display: block;
-}
-
-.left-arrow {
-  margin-left: 80px;
-  display: block;
-}
-
-.slide-nav {
-  display: none;
-  inset: auto 0% 0%;
-}
-
 .slide-wrapper, .slide-container {
   height: 100%;
 }
@@ -4106,105 +4020,6 @@ figcaption {
   top: auto;
 }
 
-.about-team {
-  text-align: center;
-  align-self: center;
-  width: 75%;
-  max-width: 850px;
-  margin-bottom: 120px;
-}
-
-.team-content {
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  display: flex;
-}
-
-.team-container {
-  align-self: center;
-  width: 75%;
-  max-width: 980px;
-}
-
-.team-cell {
-  text-align: center;
-  flex: 0 25%;
-  margin-bottom: 80px;
-}
-
-.team-job-desc {
-  font-size: .9em;
-}
-
-.team-name {
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-.collection-list-2 {
-  flex-flow: wrap;
-  justify-content: center;
-  display: flex;
-}
-
-.testimonial-container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-}
-
-.slide-nav-2 {
-  display: none;
-}
-
-.testimonial-name {
-  margin-bottom: 0;
-}
-
-.testimonial-stroke {
-  background-color: var(--cream);
-  width: 20px;
-  height: 2px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.slider {
-  background-color: #0000;
-  min-height: 600px;
-}
-
-.client-logos {
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-}
-
-.client-logo {
-  width: 110px;
-  height: 110px;
-}
-
-.client-logo-cell {
-  justify-content: center;
-  align-items: center;
-  width: 14%;
-  height: 160px;
-  margin: 10px;
-  padding: 20px;
-  display: flex;
-}
-
 .image-3 {
   max-height: 70px;
 }
@@ -4283,34 +4098,6 @@ figcaption {
   margin-left: 20px;
 }
 
-.orange {
-  color: var(--tomato);
-}
-
-.gas-logo {
-  width: 260px;
-  display: none;
-  position: absolute;
-  inset: 85px auto auto 100px;
-}
-
-.home-slide-arrows {
-  color: var(--tomato);
-  font-size: .6em;
-}
-
-.filter {
-  z-index: 10;
-  background-color: #f1cd4b1c;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.map-wrapper {
-  position: relative;
-}
-
 .select-field {
   border: 1px solid var(--rules-light);
   color: var(--cream);
@@ -4338,987 +4125,6 @@ figcaption {
   margin-top: -40px;
 }
 
-@media screen and (max-width: 991px) {
-  h1 {
-    font-size: 5em;
-  }
-
-  h2 {
-    font-size: 3.5em;
-  }
-
-  h3 {
-    font-size: 1.3em;
-  }
-
-  h4 {
-    font-size: 1.2em;
-  }
-
-  h5 {
-    font-size: 1em;
-  }
-
-  .container, .container.text-center.home-intro-container {
-    margin-left: 0;
-  }
-
-  .container.flex-row.push-left.footer-legal {
-    flex-direction: column;
-  }
-
-  .container.push-left, .container.container-margin {
-    margin-left: 0;
-  }
-
-  .container.about-process-container {
-    flex-wrap: wrap;
-  }
-
-  .navigation-bar {
-    padding: 15px 20px;
-  }
-
-  .button {
-    font-size: 1.1em;
-  }
-
-  .button.button-light.cta-postition {
-    display: none;
-  }
-
-  .button.button-light.cta-postition.desktop {
-    display: block;
-  }
-
-  .button.tag {
-    font-size: .8em;
-  }
-
-  .text-small.footer-legal.left-margin {
-    margin-left: 0;
-  }
-
-  .menu-toggle {
-    margin-bottom: 8px;
-  }
-
-  .menu-toggle-line.line-last {
-    margin-bottom: 7px;
-  }
-
-  .item-bordered {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .item-bordered.item-first.item-bordered-small.item-shrink {
-    border-bottom: 1px #000;
-    border-right-style: none;
-  }
-
-  .item-bordered.item-bordered-small.item-last {
-    border-top-style: none;
-    padding-top: 10px;
-    padding-left: 0;
-  }
-
-  .text-large {
-    font-size: 54px;
-    line-height: 60px;
-  }
-
-  .flex-row.team-member-details {
-    flex-direction: column;
-  }
-
-  .section-padding {
-    margin-left: 0;
-  }
-
-  .section-padding.page-header-section {
-    padding-left: 0;
-  }
-
-  .section-padding.gradient-top.section-min-height.home-section-cta-bg {
-    min-height: 800px;
-  }
-
-  .section-padding.section-stats.about-cta {
-    min-height: auto;
-  }
-
-  .section-padding.section-about {
-    min-height: 800px;
-  }
-
-  .intro-heading {
-    max-width: 100%;
-  }
-
-  .intro-heading.small {
-    font-size: 4em;
-  }
-
-  .intro-heading.contact-intro {
-    margin-right: 11px;
-  }
-
-  .navigation-menu {
-    margin-top: 80px;
-  }
-
-  .article blockquote {
-    font-size: 2.7em;
-  }
-
-  .article h2 {
-    font-size: 3.1em;
-  }
-
-  .article h3 {
-    font-size: 1.3em;
-  }
-
-  .item-navigation {
-    padding: 40px;
-  }
-
-  .item-navigation.item-navigation-second {
-    padding-left: 40px;
-  }
-
-  .post-preview {
-    flex-direction: column;
-  }
-
-  .post-preview-item.post-preview-item-left {
-    margin-bottom: 40px;
-    padding-right: 0;
-  }
-
-  .post-preview-item.post-preview-item-right {
-    padding-left: 0;
-  }
-
-  .form-message {
-    padding: 120px;
-  }
-
-  .project-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-grid-item {
-    max-width: 100%;
-    margin-bottom: 40px;
-  }
-
-  .project-image {
-    max-height: 270px;
-  }
-
-  .project-title-fixed {
-    display: none;
-  }
-
-  .image-license-image.image-license-text {
-    max-width: 200px;
-  }
-
-  .paragraph.large {
-    font-size: 1.4em;
-  }
-
-  .paragraph.large.text-center.text-home-intro {
-    width: 80%;
-  }
-
-  .paragraph.large.project-intro {
-    width: 70%;
-  }
-
-  .fade-page-in {
-    padding-top: 80px;
-  }
-
-  .nav-section {
-    min-height: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: auto;
-  }
-
-  .nav-title-container {
-    width: 100%;
-    margin-top: 0%;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: none;
-  }
-
-  .heading-6 {
-    font-size: 3em;
-  }
-
-  .heading-7 {
-    font-size: 1.3em;
-  }
-
-  .heading-8 {
-    font-size: 1.2em;
-  }
-
-  .heading-9 {
-    font-size: 1em;
-  }
-
-  .section-margin {
-    margin-left: 0;
-  }
-
-  .collection-list-wrapper {
-    max-width: 100%;
-  }
-
-  .home-stats-row {
-    flex-direction: column;
-    margin-bottom: 0;
-  }
-
-  .home-stats-cell {
-    width: 100%;
-    margin-bottom: 80px;
-  }
-
-  .home-stats-cell.last {
-    display: none;
-  }
-
-  .content-block {
-    width: 70%;
-  }
-
-  .cthulu-container {
-    top: -123px;
-  }
-
-  /* .cthulu-image {
-    top: -190px;
-  } */
-
-  .rich-text-block.project-image-description {
-    width: 100%;
-  }
-
-  .image-description {
-    width: 70%;
-  }
-
-  ._w-lightbox-right {
-    background-image: url("https://cdn.prod.website-files.com/5c1bb997cb1dd637bfe6c899/5c354d094a83a4cf2cfae5ac_w-lightbox-right.svg");
-  }
-
-  .left-arrow {
-    margin-left: 0;
-  }
-
-  .home-h1-container {
-    width: 80%;
-    margin-left: 0;
-  }
-
-  .scroll-prompt {
-    background-image: none;
-    margin-bottom: 70px;
-    margin-left: 0;
-  }
-
-  .about-content-cell {
-    padding-bottom: 120px;
-  }
-
-  .process-cell {
-    flex: 0 30%;
-    margin: 45px 16px;
-  }
-
-  .process-stroke {
-    display: none;
-  }
-
-  .about-team {
-    width: 75%;
-  }
-
-  .team-container {
-    width: 100%;
-  }
-
-  .team-cell {
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-
-  .testimonial-container {
-    width: 80%;
-  }
-
-  .client-logo-cell {
-    width: 24%;
-  }
-
-  .right-arrow-2 {
-    inset: 0% -5% 0% auto;
-  }
-
-  .left-arrow-2 {
-    inset: 0% auto 0% -5%;
-  }
-
-  .gas-logo {
-    width: 190px;
-    inset: 136px auto auto 20px;
-  }
-
-  .select-field {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  h2 {
-    font-size: 3em;
-  }
-
-  .container.menu-overlay-container {
-    padding-bottom: 20px;
-  }
-
-  .container.container-image-details {
-    align-items: flex-start;
-  }
-
-  .navigation-bar {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .button.button-light.cta-postition {
-    display: none;
-  }
-
-  .text-small.footer-legal.left-margin {
-    margin-left: 0;
-  }
-
-  .item-bordered {
-    border-right-style: none;
-    padding-bottom: 20px;
-    padding-left: 0;
-  }
-
-  .item-bordered.form-input.item-last {
-    padding-left: 0;
-  }
-
-  .item-bordered.form-input.item-last.border-top {
-    border-left-style: none;
-  }
-
-  .item-bordered.item-first.item-bordered-small.item-shrink {
-    padding-bottom: 0;
-  }
-
-  .item-bordered.item-last {
-    padding-left: 20px;
-  }
-
-  .item-bordered.item-bordered-large.team-member {
-    padding-right: 0;
-  }
-
-  .item-bordered.footer-column {
-    margin-bottom: 20px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-  }
-
-  .item-bordered.footer-column.border-light {
-    padding-bottom: 50px;
-  }
-
-  .item-bordered.project-meta-item {
-    margin-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-  }
-
-  .text-large {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .flex-row {
-    flex-direction: column;
-  }
-
-  .flex-row.footer-details {
-    display: block;
-  }
-
-  .flex-row.menu-bottom {
-    padding-bottom: 0;
-  }
-
-  .section-padding.home-intro-section.home-slideshow {
-    min-height: 700px;
-  }
-
-  .section-padding.gradient-top.section-min-height {
-    min-height: auto;
-  }
-
-  .section-padding.gradient-top.section-min-height.home-section-cta-bg {
-    min-height: 700px;
-  }
-
-  .section-padding.gradient-bottom.section-min-height {
-    min-height: auto;
-  }
-
-  .section-padding.section-about {
-    min-height: 700px;
-  }
-
-  .intro-heading {
-    font-size: 4em;
-  }
-
-  .intro-heading.small {
-    font-size: 3em;
-  }
-
-  .intro-heading.contact-intro {
-    margin-right: 10px;
-    display: flex;
-    position: relative;
-  }
-
-  .intro-heading.contact-intro.blank {
-    margin-bottom: -40px;
-  }
-
-  .navigation-menu {
-    margin-top: 40px;
-  }
-
-  .article p, .article h4, .article ul, .article ol, .article blockquote, .article h6, .article h2 {
-    width: 100%;
-  }
-
-  .item-navigation.item-navigation-second {
-    border-top-style: none;
-    border-left-style: none;
-    padding-left: 40px;
-  }
-
-  .separated-list-item {
-    flex-direction: column;
-  }
-
-  .separated-list-item.separated-list-item-last {
-    border-bottom-style: none;
-  }
-
-  .separated-list-item-text {
-    padding-right: 0;
-  }
-
-  .text-right {
-    text-align: left;
-  }
-
-  .member-bio {
-    margin-top: 20px;
-  }
-
-  .post-preview {
-    flex-direction: column;
-    margin-bottom: 120px;
-  }
-
-  .post-preview-item.post-preview-item-right {
-    padding-left: 0;
-  }
-
-  .post-preview-thumbnail {
-    max-height: none;
-    margin-bottom: 20px;
-  }
-
-  .form-message {
-    padding: 60px;
-  }
-
-  .form-message.form-error {
-    padding: 30px;
-  }
-
-  .project-grid-title-overlay {
-    width: 460px;
-  }
-
-  .image-license-row {
-    flex-direction: column;
-  }
-
-  .image-license-text {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-
-  .search.nav-overlay {
-    margin-left: 0;
-  }
-
-  .stat-large {
-    font-size: 7em;
-  }
-
-  .content-block {
-    width: 80%;
-  }
-
-  .project-list-item {
-    flex-direction: column;
-    padding-right: 50px;
-  }
-
-  .project-list-name {
-    width: 100%;
-    margin-bottom: 6px;
-  }
-
-  .project-list-meta {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .client-list-meta-item {
-    width: auto;
-  }
-
-  .cthulu-container {
-    top: 0;
-    right: 0;
-  }
-
-  .cthulu-image {
-    opacity: .78;
-    min-width: 670px;
-    right: -158px;
-  }
-
-  .p-overview {
-    width: 100%;
-    font-size: .9em;
-  }
-
-  .section.map, .section.mapbox {
-    background-size: 1220px;
-    height: 450px;
-  }
-
-  .image-description {
-    width: 100%;
-  }
-
-  .nav-other-links-container {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 30px;
-  }
-
-  .nav-other-text {
-    margin-bottom: 20px;
-  }
-
-  .home-h1-image {
-    display: none;
-  }
-
-  .home-h1-image.mobile {
-    width: 80%;
-    height: auto;
-    display: block;
-  }
-
-  .slide-background {
-    align-items: stretch;
-  }
-
-  .home-h1-container {
-    align-items: center;
-  }
-
-  .blog-intro {
-    width: 100%;
-    font-size: 1.3em;
-  }
-
-  .div-block-8 {
-    width: 100%;
-  }
-
-  .about-content-row {
-    flex-direction: column;
-  }
-
-  .about-content-cell {
-    width: 100%;
-  }
-
-  .about-content-cell.item-bordered.about-border {
-    border-top-style: solid;
-    border-left-style: none;
-    padding-bottom: 120px;
-    padding-left: 0%;
-  }
-
-  .process-cell {
-    flex-basis: 31%;
-  }
-
-  .about-team {
-    width: 80%;
-  }
-
-  .team-cell {
-    flex-basis: 50%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .testimonial-container {
-    width: 85%;
-  }
-
-  .slider {
-    min-height: 700px;
-  }
-
-  .right-arrow-2, .left-arrow-2 {
-    display: flex;
-  }
-
-  .contact-word-container {
-    position: relative;
-    bottom: -45px;
-  }
-
-  .contact-header-container {
-    margin-bottom: 60px;
-  }
-
-  .contact-words.hide {
-    opacity: 0;
-  }
-
-  .gas-logo {
-    top: 143px;
-    left: -10px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  h1 {
-    font-size: 3em;
-  }
-
-  h2 {
-    font-size: 2.1em;
-  }
-
-  h3, h4 {
-    font-size: 1em;
-  }
-
-  h5 {
-    letter-spacing: 2px;
-  }
-
-  li {
-    font-size: .9em;
-  }
-
-  .container.menu-overlay-container {
-    height: 100vh;
-    overflow: scroll;
-  }
-
-  .container.blog-header {
-    margin-top: 70px;
-  }
-
-  .container.about-process-container {
-    flex-direction: column;
-  }
-
-  .navigation-bar {
-    flex-direction: row;
-    padding-top: 14px;
-    padding-bottom: 14px;
-  }
-
-  .button {
-    font-size: .9em;
-  }
-
-  .button.navigation-button {
-    display: none;
-  }
-
-  .button.tag {
-    font-size: .7em;
-  }
-
-  .footer {
-    padding-top: 0px;
-  }
-
-  .footer-brand {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 40px;
-  }
-
-  .flex-row.footer-details {
-    margin-bottom: 80px;
-  }
-
-  .flex-row.menu-bottom {
-    display: none;
-  }
-
-  .social-link {
-    width: 50px;
-    height: 50px;
-  }
-
-  .footer-logo.w--current {
-    margin-bottom: 20px;
-  }
-
-  .section-padding {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .section-padding.page-header-section.gas-header {
-    padding-top: 140px;
-  }
-
-  .intro-heading {
-    font-size: 3em;
-  }
-
-  .intro-heading.small {
-    font-size: 2.3em;
-  }
-
-  .navigation-menu {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .text-h1.text-white.nav-menu-link {
-    font-size: 4em;
-    display: block;
-  }
-
-  .link-block {
-    flex: none;
-  }
-
-  .project-large {
-    margin-bottom: 40px;
-  }
-
-  .article p {
-    font-size: .9em;
-  }
-
-  .article blockquote {
-    margin-top: 40px;
-    font-size: 1.8em;
-  }
-
-  .article h6 {
-    margin-bottom: 20px;
-  }
-
-  .article h2 {
-    font-size: 2.3em;
-  }
-
-  .article figure {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .item-navigation {
-    padding: 40px 0 40px 40px;
-  }
-
-  .about-me-image {
-    max-width: 100%;
-  }
-
-  .about-us-image-section {
-    margin-bottom: 0;
-  }
-
-  .member-bio {
-    margin-top: 10px;
-  }
-
-  .form-message {
-    padding: 30px;
-  }
-
-  .form-message.form-error {
-    padding: 20px;
-  }
-
-  .project-grid-title-overlay {
-    width: 100%;
-  }
-
-  .paragraph {
-    font-size: .9em;
-  }
-
-  .paragraph.large {
-    font-size: 1.1em;
-  }
-
-  .paragraph.large.project-intro {
-    width: 90%;
-  }
-
-  .nav-title-container {
-    display: none;
-  }
-
-  .search.nav-overlay {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .stat-large {
-    font-size: 4.5em;
-  }
-
-  .content-block {
-    width: 100%;
-  }
-
-  .cthulu-container {
-    top: -147px;
-  }
-
-  .cthulu-image {
-    opacity: .67;
-    min-width: 520px;
-    top: -36px;
-    right: -65px;
-  }
-
-  .rich-text-block.project-image-description {
-    width: 100%;
-  }
-
-  .p-overview {
-    font-size: .8em;
-  }
-
-  .image-2 {
-    width: 50px;
-  }
-
-  .nav-other-links-container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .nav-other-text {
-    margin-bottom: 16px;
-  }
-
-  .home-h1-image.mobile {
-    width: 100%;
-  }
-
-  .blog-intro {
-    font-size: 1.2em;
-  }
-
-  .scroll-prompt {
-    margin-bottom: 80px;
-  }
-
-  .about-team {
-    width: 100%;
-  }
-
-  .team-cell {
-    flex-basis: 100%;
-  }
-
-  .testimonial-container {
-    width: 100%;
-  }
-
-  .slider {
-    min-height: 800px;
-  }
-
-  .client-logo-cell {
-    width: 40%;
-  }
-
-  .div-block-11, .div-block-12 {
-    display: none;
-  }
-
-  .right-arrow-2, .left-arrow-2 {
-    align-items: flex-start;
-  }
-
-  .contact-word-container {
-    bottom: -30px;
-  }
-
-  .gas-logo {
-    width: 170px;
-    top: 128px;
-  }
-
-  .home-slide-arrows {
-    margin-right: 10px;
-  }
-
-  .home-slide-arrows.left {
-    margin-left: 10px;
-  }
-}
-
-
 #w-node-_0485ff76-9790-5543-79d6-8c4fca9c5348-19122e72 {
   grid-area: 1 / 3 / 2 / 5;
 }
@@ -5342,7 +4148,7 @@ figcaption {
   border: 2px solid #000000;
   border-radius: 4px;
   transition: all 0.3s ease;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Bitcount Prop Single", system-ui;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
