@@ -2404,11 +2404,11 @@ figcaption {
 }
 
 .section-padding.page-header-section {
-  background-image: linear-gradient(to bottom, #1d171700 80%, var(--brown));
+  /* background-image: linear-gradient(to bottom, #1d171700 80%, var(--brown)); */
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 100vh;
+  height: 1000vh;
   min-height: 400px;
   max-height: 850px;
   margin-left: 0;
@@ -2467,7 +2467,7 @@ figcaption {
 }
 
 .section-padding.page-header-section.about-header {
-  background-image: linear-gradient(to bottom, #1d171700 80%, var(--brown)), url("Unitiled3.png");
+  background-image: url("Unitiled3.png");
   background-position: 0 0, 50%;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
@@ -4921,7 +4921,6 @@ figcaption {
   .cthulu-image {
     opacity: .78;
     min-width: 670px;
-    top: -100px;
     right: -158px;
   }
 
