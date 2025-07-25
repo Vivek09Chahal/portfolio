@@ -3558,9 +3558,8 @@ figcaption {
 
 .cthulu-image {
   max-width: 90%;
-  max-height: 1000px;
+  max-height: 900px;
   position: absolute;
-  right: -240px;
 }
 
 .gradient-bottom-block {
@@ -4586,9 +4585,9 @@ figcaption {
     top: -123px;
   }
 
-  .cthulu-image {
+  /* .cthulu-image {
     top: -190px;
-  }
+  } */
 
   .rich-text-block.project-image-description {
     width: 100%;
