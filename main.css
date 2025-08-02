@@ -1966,10 +1966,13 @@ figcaption {
   justify-content: space-between;
   align-items: center;
   height: auto;
-  padding: 10px 10px;
+  padding: 15px 25px;
   display: flex;
-  background-color: rgba(32, 27, 27, 0);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .button {
@@ -3268,10 +3271,32 @@ figcaption {
   z-index: 1000;
   min-height: 0;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 767px) {
+  .nav-section {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+  }
+  
+  .navigation-bar {
+    padding: 12px 20px;
+    border-radius: 30px;
+  }
+  
+  .grid {
+    margin-top: 100px;
+  }
 }
 
 .footer-link {
@@ -4028,6 +4053,7 @@ figcaption {
   grid-template: ". . . . . . ."
                  / 1fr 1fr 1fr 1fr;
   min-height: 550px;
+  margin-top: 120px;
 }
 
 .div-block-12 {
